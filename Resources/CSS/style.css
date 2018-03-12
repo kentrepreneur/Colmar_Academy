@@ -8,6 +8,11 @@ strong {
   font-weight: 700;
 }
 
+a {
+  text-decoration: underline;
+  color: blue;
+}
+
 /* Navigation Section */
 .nav {
   display: flex;
@@ -69,6 +74,8 @@ strong {
   position: relative;
   top: 4rem;
   overflow: hidden;
+  width: 100%;
+  height: auto;
   padding: 2rem 1.5rem;
   background-color: lightgray;
 }
@@ -136,3 +143,117 @@ strong {
 }
 
 /* Section 3 */
+.section-3 {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  padding: 2rem 1.5rem;
+  background-color: white;
+}
+
+/* Left Container */
+.practice {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  max-width: 60%;
+  height: auto;
+}
+
+.practice-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.practice-img img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+}
+
+.practice-info h3 {
+  padding: 2rem 0 1.5rem 0;
+}
+
+.practice-info span {
+  padding: 2rem 0;
+  display: block;
+}
+
+/* Right Container */
+.campus {
+  display: inline-flex;
+  flex-flow: column wrap;
+  max-width: 40%;
+  height: auto;
+  border-left: 1px dotted lightgray;
+  margin-left: 1rem;
+}
+
+.rec {
+  display: none;
+}
+
+.campus-details {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 1rem 1rem 0.75rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.campus-details .sq {
+  max-width: 35%;
+}
+
+.cd-box {
+  max-width: 65%;
+  padding-left: 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.cd-box p {
+  padding: 1rem 0;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 30rem) {
+  .campus {
+    border-left: none;
+    max-width: 100%;
+    margin-left: 0;
+    border-bottom: 1px dotted lightgray;
+    padding-bottom: 2rem;
+  }
+
+  .practice {
+    display: none;
+  }
+
+  .sq {
+    display: none;
+  }
+
+  .campus-details {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .campus-details .rec {
+    max-width: 100%;
+    display: block;
+  }
+
+  .cd-box {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Section 4 */
