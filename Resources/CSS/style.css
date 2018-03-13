@@ -257,3 +257,93 @@ a {
 }
 
 /* Section 4 */
+.section-4 {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem 4rem;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: lightgray;
+  position: relative;
+  top: 4rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.courses-mobile {
+  display: none;
+}
+
+.courses {
+  display: flex;
+  flex-flow: row wrap;
+  /* align-items: center; */
+  overflow: hidden;
+}
+
+.course-box {
+  height: 16rem;
+  max-width: 30%;
+  overflow: hidden;
+  margin: 0 2rem 2rem 0;
+}
+
+.course-box img,
+.course-box.course-box-info {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.course-box-info {
+  padding: 1rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.course-box-info p:nth-child(2) {
+  padding: 0.5rem 0;
+}
+
+.course-box-info p {
+  font-size: .8rem;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 30rem) {
+  .section-4 {
+    background-color: white;
+    padding: 0;
+  }
+
+  .courses {
+    display: none;
+  }
+
+  .courses-mobile {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 0rem auto;
+    margin-bottom: 1rem;
+  }
+
+  .subjects {
+    min-width: 100%;
+    padding: 1rem 0 1.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: lightgray;
+  }
+}
+
+/* Questions:
+Why is Section 2 creating unneeded space to the right?
+Why do i have to keep using position relative top 4rem?
+Section 4 flex row goes to 2x2 with a blank 3rd space.
+Lines 261-2-4-5 all seem to be unneeded when commented out. Why?
+
+Push to origin --> talk with online chat */
