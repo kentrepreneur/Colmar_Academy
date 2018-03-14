@@ -345,9 +345,8 @@ a {
 Why is Section 2 creating unneeded space to the right? remove width:100%;
 Why do i have to keep using position relative top 4rem? Just cause, but its working.
 Section 4 flex row goes to 2x2 with a blank 3rd space. use justify-content: center;
-Lines 261-2-4-5 all seem to be unneeded when commented out. Why? Probably because the .courses class is taking care of those affects.
-
-Push to origin --> talk with online chat */
+Lines 261-2-4-5 all seem to be unneeded when commented out. Why? Probably because the .courses class
+is taking care of those affects. */
 
 /* Section 5 */
 .section-5 {
@@ -369,7 +368,8 @@ Push to origin --> talk with online chat */
   max-width: 100%;
   height: auto;
   overflow: hidden;
-  padding: 1rem 0 2rem 1.5rem;
+  padding: 1rem 0 0 1.5rem;
+  margin-bottom: -5rem;
 }
 
 /* Left Container */
@@ -440,5 +440,27 @@ Push to origin --> talk with online chat */
 
   .t-left {
     max-width: 100%;
+  }
+}
+
+/* Footer Section */
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 1px dotted lightgray;
+  position: relative;
+  top: 4rem;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 30rem) {
+  .tc {
+    display: none;
+  }
+
+  footer {
+    justify-content: center;
   }
 }
