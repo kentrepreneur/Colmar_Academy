@@ -74,7 +74,7 @@ a {
   position: relative;
   top: 4rem;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   padding: 2rem 1.5rem;
   background-color: lightgray;
@@ -282,7 +282,7 @@ a {
 .courses {
   display: flex;
   flex-flow: row wrap;
-  /* align-items: center; */
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -291,6 +291,7 @@ a {
   max-width: 30%;
   overflow: hidden;
   margin: 0 2rem 2rem 0;
+  flex-grow: 2;
 }
 
 .course-box img,
@@ -341,9 +342,103 @@ a {
 }
 
 /* Questions:
-Why is Section 2 creating unneeded space to the right?
-Why do i have to keep using position relative top 4rem?
-Section 4 flex row goes to 2x2 with a blank 3rd space.
-Lines 261-2-4-5 all seem to be unneeded when commented out. Why?
+Why is Section 2 creating unneeded space to the right? remove width:100%;
+Why do i have to keep using position relative top 4rem? Just cause, but its working.
+Section 4 flex row goes to 2x2 with a blank 3rd space. use justify-content: center;
+Lines 261-2-4-5 all seem to be unneeded when commented out. Why? Probably because the .courses class is taking care of those affects.
 
 Push to origin --> talk with online chat */
+
+/* Section 5 */
+.section-5 {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  top: 4rem;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.theses {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 1rem 0 2rem 1.5rem;
+}
+
+/* Left Container */
+.t-left {
+  max-width: 60%;
+  height: auto;
+  display: inline-block;
+}
+
+.t-left video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.urban h5 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+/* Right Container */
+.t-right {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 40%;
+  height: auto;
+  margin-left: 1.5rem;
+}
+
+.tr-box {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  height: 30%;
+}
+
+.tr-box img {
+  max-width: 35%;
+  max-height: auto;
+  padding: 1rem;
+}
+
+.thesis-info {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 65%;
+  height: auto;
+  justify-content: center
+}
+
+.thesis-info h5 {
+  margin-bottom: 1rem;
+}
+
+#fisma {
+  background-color: lightgray;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 30rem) {
+  .t-left .urban,
+  .t-right {
+    display: none;
+  }
+
+  .theses {
+    padding: 0;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .t-left {
+    max-width: 100%;
+  }
+}
