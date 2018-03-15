@@ -13,13 +13,41 @@ a {
   color: blue;
 }
 
+.frn {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.fr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.r4h {
+  position: relative;
+  top: 4rem;
+  overflow: hidden;
+}
+
+.fc {
+  display: flex;
+  flex-flow: column;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
 /* Navigation Section */
 .nav {
-  display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  min-width: 100%;
+  width: 100%;
   padding: 1rem 1.5rem;
   position: fixed;
   z-index: 5;
@@ -33,19 +61,17 @@ a {
   padding-right: 2rem;
 }
 
-.navbar ul li {
-  padding-right: 1rem;
-}
-
 .logo {
   font-size: 2rem;
-  display: flex;
-  align-items: center;
 }
 
 .logo img {
   display: inline-block;
   height: 2rem;
+}
+
+.navbar ul li {
+  padding-right: 1rem;
 }
 
 .mobile-nav {
@@ -68,14 +94,9 @@ a {
 
 /* Section 2 */
 .section-2 {
-  display: flex;
-  flex-flow: row nowrap;
-  align-content: center;
-  position: relative;
-  top: 4rem;
-  overflow: hidden;
-  /* width: 100%; */
-  height: auto;
+  flex-wrap: nowrap;
+  /* max-width: 100%; */
+  /* height: auto; */
   padding: 2rem 1.5rem;
   background-color: lightgray;
 }
@@ -127,6 +148,8 @@ a {
   .hero-info {
     width: 99%;
     padding: 2rem 1rem;
+    align-items: center;
+    text-align: center;
   }
 
   .cta {
@@ -144,11 +167,9 @@ a {
 
 /* Section 3 */
 .section-3 {
-  position: relative;
-  top: 4rem;
   display: flex;
   flex-flow: row nowrap;
-  overflow: hidden;
+  flex-wrap: nowrap;
   max-width: 100%;
   height: auto;
   padding: 2rem 1.5rem;
@@ -200,9 +221,7 @@ a {
 }
 
 .campus-details {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  flex-wrap: nowrap;
   padding: 0 1rem 1rem 0.75rem;
   max-width: 100%;
   height: auto;
@@ -258,20 +277,13 @@ a {
 
 /* Section 4 */
 .section-4 {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 2rem 4rem;
-  overflow: hidden;
+  flex-wrap: nowrap;
+  padding: 2rem 4rem 0 4rem;
   max-width: 100%;
   background-color: lightgray;
-  position: relative;
-  top: 4rem;
 }
 
 .heading {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 700;
   font-size: 1.75rem;
 }
 
@@ -280,18 +292,16 @@ a {
 }
 
 .courses {
-  display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .course-box {
   height: 16rem;
   max-width: 30%;
-  overflow: hidden;
   margin: 0 2rem 2rem 0;
-  flex-grow: 2;
 }
 
 .course-box img,
@@ -304,7 +314,7 @@ a {
 .course-box-info {
   padding: 1rem;
   background-color: white;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .course-box-info p:nth-child(2) {
@@ -334,12 +344,11 @@ a {
   }
 
   .subjects {
-    min-width: 100%;
+    max-width: 100%;
     padding: 1rem 0 1.5rem 1rem;
     margin-bottom: 0.5rem;
     background-color: lightgray;
   }
-}
 
 /* Questions:
 Why is Section 2 creating unneeded space to the right? remove width:100%;
@@ -350,16 +359,7 @@ is taking care of those affects. */
 
 /* Section 5 */
 .section-5 {
-  display: flex;
-  flex-flow: column wrap;
-  position: relative;
-  top: 4rem;
-}
-
-.heading {
-  text-align: center;
-  margin-top: 2rem;
-  font-weight: 700;
+  flex-wrap: wrap;
 }
 
 .theses {
@@ -412,8 +412,6 @@ is taking care of those affects. */
 }
 
 .thesis-info {
-  display: flex;
-  flex-flow: column nowrap;
   max-width: 65%;
   height: auto;
   justify-content: center
