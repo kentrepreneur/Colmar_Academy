@@ -335,12 +335,16 @@ a {
     display: none;
   }
 
+  .heading {
+    margin: 0rem 0 2rem 0;
+  }
+
   .courses-mobile {
     display: flex;
     flex-flow: column nowrap;
     width: 90%;
     margin: 0rem auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .subjects {
@@ -349,6 +353,7 @@ a {
     margin-bottom: 0.5rem;
     background-color: lightgray;
   }
+}
 
 /* Questions:
 Why is Section 2 creating unneeded space to the right? remove width:100%;
