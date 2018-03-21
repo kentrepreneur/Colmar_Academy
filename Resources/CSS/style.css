@@ -4,13 +4,21 @@ html {
   font-family: Helvetica, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+span, p, a, em, li, header, footer, nav {
+  font-family: 'Chivo', sans-serif;
+}
+
 strong {
   font-weight: 700;
 }
 
 a {
-  text-decoration: underline;
-  color: blue;
+  text-decoration: none;
+  color: #116466;
 }
 
 .frn {
@@ -41,18 +49,18 @@ a {
   text-align: center;
   font-weight: 700;
   margin-top: 2rem;
+  color: #2C3531;
 }
 
 /* Navigation Section */
 .nav {
-  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   padding: 1rem 1.5rem;
   position: fixed;
   z-index: 5;
-  border-bottom: 1px solid black;
-  background-color: white;
+  background-color: #F5F5F5;
+  border-bottom: 2px solid #2C3531;
 }
 
 .navbar ul {
@@ -63,6 +71,11 @@ a {
 
 .logo {
   font-size: 2rem;
+}
+
+.logo span {
+  font-weight: 200;
+  color: #2C3531;
 }
 
 .logo img {
@@ -97,7 +110,7 @@ a {
   flex-wrap: nowrap;
   max-width: 100%;
   padding: 2rem 1.5rem;
-  background-color: lightgray;
+  background-color: #FFCB9A;
 }
 
 .hero-img {
@@ -109,6 +122,7 @@ a {
 .hero-img img {
   max-width: 100%;
   display: inline;
+  border-radius: 4px;
 }
 
 .hero-info {
@@ -116,8 +130,9 @@ a {
   display: inline-flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
   padding-left: 2.5rem;
-  color: black
+  color: #2C3531;
 }
 
 .hero-info h5,
@@ -126,10 +141,12 @@ a {
 }
 
 .cta {
-  background-color: gray;
-  color: white;
+  background-color: #116466;
+  color: #F5F5F5;
   padding: 0.5rem;
   text-align: center;
+  width: 60%;
+  border-radius: 4px;
 }
 
 @media only screen and (min-width: 20rem) and (max-width: 30rem) {
@@ -170,7 +187,9 @@ a {
   flex-wrap: nowrap;
   max-width: 100%;
   padding: 2rem 1.5rem;
-  background-color: white;
+  border-top: 3px solid #00B9C2;
+  background-color: #D1E8E2;
+  color: #062D23;
 }
 
 /* Left Container */
@@ -189,6 +208,7 @@ a {
 .practice-img img {
   max-width: 100%;
   display: inline;
+  border-radius: 4px;
 }
 
 .practice-info h3 {
@@ -198,6 +218,7 @@ a {
 .practice-info span {
   padding: 2rem 0;
   display: block;
+  color: #116466;
 }
 
 /* Right Container */
@@ -205,7 +226,7 @@ a {
   display: inline-flex;
   flex-flow: column wrap;
   max-width: 40%;
-  border-left: 1px dotted lightgray;
+  border-left: 1px dotted #116466;
   margin-left: 1rem;
 }
 
@@ -217,6 +238,10 @@ a {
   flex-wrap: nowrap;
   padding: 0 1rem 1rem 0.75rem;
   max-width: 100%;
+}
+
+.campus-details img {
+  border-radius: 4px;
 }
 
 .campus-details .sq {
@@ -234,13 +259,17 @@ a {
   padding: 1rem 0;
 }
 
+.cd-box a {
+  color: #0645AD;
+}
+
 @media only screen and (min-width: 20rem) and (max-width: 30rem) {
   .campus {
     border-left: none;
     max-width: 100%;
     margin-left: 0;
     border-bottom: 1px dotted lightgray;
-    padding-bottom: 2rem;
+    margin-bottom: -1.5rem;
   }
 
   .practice {
@@ -254,6 +283,7 @@ a {
   .campus-details {
     flex-wrap: wrap;
     max-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .campus-details .rec {
@@ -272,7 +302,8 @@ a {
   flex-wrap: nowrap;
   padding: 2rem 4rem 0 4rem;
   max-width: 100%;
-  background-color: lightgray;
+  border-top: 3px solid #116466;
+  background-color: #D9B08C;
 }
 
 .heading {
@@ -292,8 +323,13 @@ a {
 
 .course-box {
   height: 16rem;
+  display: flex;
+  flex-direction: column;
   max-width: 30%;
   margin: 0 2rem 2rem 0;
+  border: 1px solid #2C3531;
+  border-radius: 4px;
+  /* border-top-left-radius: 4px; */
 }
 
 .course-box img,
@@ -305,8 +341,9 @@ a {
 
 .course-box-info {
   padding: 1rem;
-  background-color: white;
-  overflow: scroll;
+  background-color: #F5F5F5;
+  color: #2C3531;
+  overflow: hidden;
 }
 
 .course-box-info p:nth-child(2) {
@@ -319,7 +356,7 @@ a {
 
 @media only screen and (min-width: 20rem) and (max-width: 30rem) {
   .section-4 {
-    background-color: white;
+    background-color: #D9B08C;
     padding: 0;
   }
 
@@ -343,13 +380,17 @@ a {
     max-width: 100%;
     padding: 1rem 0 1.5rem 1rem;
     margin-bottom: 0.5rem;
-    background-color: lightgray;
+    background-color: #D1E8E2;
+    border-radius: 4px;
   }
 }
 
 /* Section 5 */
 .section-5 {
   flex-wrap: wrap;
+  border-top: 3px solid #116466;
+  background-color: #D1E8E2;
+  color: #2C3531;
 }
 
 .theses {
@@ -372,6 +413,7 @@ a {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
 }
 
 .urban h5 {
@@ -391,6 +433,7 @@ a {
   flex-flow: row nowrap;
   max-width: 100%;
   height: 30%;
+  border-radius: 4px;
 }
 
 .tr-box img {
@@ -402,7 +445,7 @@ a {
 .thesis-info {
   max-width: 65%;
   height: auto;
-  justify-content: center
+  justify-content: center;
 }
 
 .thesis-info h5 {
@@ -410,7 +453,7 @@ a {
 }
 
 #fisma {
-  background-color: lightgray;
+  background-color: #D9B08C;
 }
 
 @media only screen and (min-width: 20rem) and (max-width: 30rem) {
@@ -419,9 +462,13 @@ a {
     display: none;
   }
 
+  .heading {
+    margin-top: 1rem;
+  }
+
   .theses {
     padding: 0;
-    margin: 1rem 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
   }
 
   .t-left {
@@ -436,9 +483,11 @@ footer {
   max-width: 100%;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  border-top: 1px dotted lightgray;
+  border-top: 3px solid #FFCB9A;
   position: relative;
   top: 4rem;
+  background-color: #2C3531;
+  color: #D1E8E2;
 }
 
 @media only screen and (min-width: 20rem) and (max-width: 30rem) {
@@ -450,4 +499,3 @@ footer {
     justify-content: center;
   }
 }
-/* Fixed section 4 */
